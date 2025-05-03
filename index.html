@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register with Squid Consultancy for professional services"
+    />
+    <title>Squid Consultancy Registration</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: transparent;
+      }
+
+      /* Vibrant gradient background */
+      .bg {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+            circle at 30% 86%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 8%,
+            transparent 8%,
+            transparent 92%
+          ),
+          radial-gradient(
+            circle at 55% 100%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 8%,
+            transparent 8%,
+            transparent 92%
+          ),
+          radial-gradient(
+            circle at 40% 75%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 6%,
+            transparent 6%,
+            transparent 94%
+          ),
+          radial-gradient(
+            circle at 7% 99%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 6%,
+            transparent 6%,
+            transparent 94%
+          ),
+          radial-gradient(
+            circle at 69% 76%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 6%,
+            transparent 6%,
+            transparent 94%
+          ),
+          radial-gradient(
+            circle at 2% 35%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 6%,
+            transparent 6%,
+            transparent 94%
+          ),
+          radial-gradient(
+            circle at 14% 48%,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.03) 6%,
+            transparent 6%,
+            transparent 94%
+          ),
+          radial-gradient(
+            circle at 28% 87%,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0.04) 4%,
+            transparent 4%,
+            transparent 96%
+          ),
+          radial-gradient(
+            circle at 65% 14%,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0.04) 4%,
+            transparent 4%,
+            transparent 96%
+          ),
+          radial-gradient(
+            circle at 51% 36%,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0.04) 4%,
+            transparent 4%,
+            transparent 96%
+          ),
+          radial-gradient(
+            circle at 6% 93%,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0.04) 4%,
+            transparent 20%,
+            transparent 80%
+          ),
+          linear-gradient(135deg, rgb(0, 0, 0), rgb(253, 197, 75));
+      }
+
+      /* Form container with glassmorphism */
+      .form-container {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        margin-bottom: -20px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgb(255, 255, 255);
+        border-left: 1px solid rgb(255, 255, 255);
+        box-shadow: 5px 5px 30px rgb(255, 255, 255);
+        border-radius: 15px;
+        padding: 50px;
+        min-height: 100%;
+        overflow: auto;
+      }
+
+      /* Fallback for browsers that don't support backdrop-filter */
+      @supports not (backdrop-filter: blur(10px)) {
+        .form-container {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      h2 {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+        padding: 15px;
+        text-align: center;
+        margin-top: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        font-size: 24px;
+        font-weight: 700;
+        position: relative;
+      }
+
+      /* Ensure the form itself doesn't introduce a white background */
+      form {
+        background: transparent;
+      }
+
+      /* Form elements */
+      .form-group {
+        margin-bottom: 12px;
+        background: transparent;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: inherit;
+        background: rgba(206, 203, 203, 0.39);
+        color: #ffffff;
+        transition: all 0.2s ease;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+        outline: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder,
+      select::placeholder {
+        color: rgba(255, 255, 255, 0.644);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 70px;
+      }
+
+      /* Phone number group */
+      .phone-group {
+        display: flex;
+        gap: 8px;
+      }
+
+      .phone-group select {
+        width: 120px;
+        flex-shrink: 0;
+        color: rgba(0, 0, 0, 0.541);
+      }
+
+      .phone-group input {
+        flex-grow: 1;
+      }
+
+      /* Gender field */
+      .gender-group {
+        margin-top: 4px;
+        padding: 6px 0;
+        background: transparent;
+      }
+
+      .gender-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .gender-list li {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      .gender-list li input[type="radio"] {
+        margin-right: 8px;
+        transform: scale(1.1);
+        cursor: pointer;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+      }
+
+      .gender-list li input[type="radio"]:checked {
+        background-color: #9ce060;
+        border-color: #81c63f;
+      }
+
+      #genderOtherInput {
+        margin-top: 8px;
+        display: none;
+      }
+
+      #genderOtherInput.visible {
+        display: block;
+      }
+
+      /* Services field */
+      .services-group {
+        margin-top: 4px;
+        padding: 6px 0;
+        background: transparent;
+      }
+
+      .services-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .services-list li {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(129, 129, 129, 0.322);
+      }
+
+      .services-list li input {
+        margin-right: 8px;
+        transform: scale(1.1);
+        cursor: pointer;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+      }
+
+      .services-list li input:checked {
+        background-color: #9ce060;
+        border-color: #81c63f;
+      }
+
+      /* Fieldset for services */
+      fieldset {
+        border: none;
+        background: transparent;
+      }
+
+      legend {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      /* Privacy section */
+      .privacy-group {
+        margin: 6px 0;
+        padding-top: 6px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        background: transparent;
+      }
+
+      .privacy-notice {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.65);
+        margin: 3px 0;
+        line-height: 1.4;
+      }
+
+      .consent-option {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      .consent-option input {
+        margin-right: 8px;
+        transform: scale(1.1);
+        cursor: pointer;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+      }
+
+      .consent-option input:checked {
+        background-color: #9ce060;
+        border-color: #81c63f;
+      }
+
+      a {
+        color: #9ce060;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: #81c63f;
+        text-decoration: underline;
+      }
+
+      /* Button styles */
+      button {
+        width: 100%;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      button:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+      }
+
+      button:disabled {
+        background: rgba(255, 255, 255, 0.3);
+        cursor: not-allowed;
+      }
+
+      /* Response messages */
+      #responseMessage {
+        margin-top: 8px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 6px;
+        border-radius: 3px;
+        color: #fff;
+        background: transparent;
+      }
+
+      #responseMessage.error {
+        background: rgba(217, 83, 79, 0.3);
+      }
+
+      #responseMessage.success {
+        background: rgba(40, 167, 69, 0.3);
+      }
+
+      /* Choices.js styling for country dropdown */
+      .choices {
+        margin-bottom: 0;
+      }
+
+      .choices__inner {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        padding: 4px;
+        font-size: 16px;
+        color: #000; /* Black font color */
+      }
+
+      .choices__list--single {
+        padding: 0;
+      }
+
+      .choices__item {
+        color: #000; /* Black font color */
+      }
+
+      .choices__item--selectable {
+        background: transparent;
+      }
+
+      .choices__list--dropdown {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        color: #000; /* Black font color */
+      }
+
+      .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .choices__input {
+        background: transparent;
+        color: #000; /* Black font color */
+      }
+
+      .choices__input::placeholder {
+        color: rgba(0, 0, 0, 0.6); /* Slightly lighter black for placeholder */
+      }
+
+      /* Responsive design */
+      @media (max-width: 480px) {
+        .form-container {
+          max-width: 90%;
+          padding: 10px;
+        }
+
+        h2 {
+          font-size: 20px;
+          padding: 10px;
+        }
+
+        button {
+          padding: 8px;
+          font-size: 13px;
+        }
+
+        label,
+        legend {
+          font-size: 11px;
+        }
+
+        input,
+        textarea,
+        select {
+          font-size: 12px;
+        }
+
+        .gender-list li,
+        .services-list li,
+        .consent-option {
+          font-size: 11px;
+        }
+
+        .privacy-notice {
+          font-size: 11px;
+        }
+
+        .phone-group select {
+          width: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="form-container">
+      <h2>Squid Consultancy Registration</h2>
+      <form id="registrationForm" action="/submit" method="POST">
+        <div class="form-group">
+          <label for="companyName"
+            >Company Name* <span aria-hidden="true">(required)</span></label
+          >
+          <input
+            type="text"
+            id="companyName"
+            name="companyName"
+            placeholder="e.g., Freelance, Start-Up or Company name"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="firstName"
+            >First Name* <span aria-hidden="true">(required)</span></label
+          >
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="e.g., John"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName"
+            >Last Name* <span aria-hidden="true">(required)</span></label
+          >
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="e.g., Doe"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender (optional)</label>
+          <div class="gender-group">
+            <ul class="gender-list">
+              <li>
+                <input
+                  type="radio"
+                  id="gender-male"
+                  name="gender"
+                  value="Male"
+                />
+                <label for="gender-male">Male</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="gender-female"
+                  name="gender"
+                  value="Female"
+                />
+                <label for="gender-female">Female</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="gender-other"
+                  name="gender"
+                  value="Other"
+                />
+                <label for="gender-other">Other</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="gender-prefer-not"
+                  name="gender"
+                  value="Prefer not to say"
+                />
+                <label for="gender-prefer-not">Prefer not to say</label>
+              </li>
+            </ul>
+            <input
+              type="text"
+              id="genderOtherInput"
+              name="genderOther"
+              placeholder="Please specify"
+              aria-label="Specify other gender"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email"
+            >Email* <span aria-hidden="true">(required)</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e.g., you@example.com"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number (optional)</label>
+          <div class="phone-group">
+            <select
+              id="countryCode"
+              name="countryCode"
+              aria-label="Country code"
+            >
+              <option value="">Select</option>
+              <option value="+1">+1 (USA/Canada)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+91">+91 (India)</option>
+              <option value="+61">+61 (Australia)</option>
+              <option value="+81">+81 (Japan)</option>
+              <option value="+49">+49 (Germany)</option>
+              <option value="+33">+33 (France)</option>
+              <option value="+86">+86 (China)</option>
+              <option value="+55">+55 (Brazil)</option>
+              <option value="+27">+27 (South Africa)</option>
+            </select>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="e.g., 123456789"
+              aria-label="Local phone number"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="streetAddress"
+            >Street Address* <span aria-hidden="true">(required)</span></label
+          >
+          <input
+            type="text"
+            id="streetAddress"
+            name="streetAddress"
+            placeholder="e.g., 123 Main St"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="city"
+            >City* <span aria-hidden="true">(required)</span></label
+          >
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="e.g., Glasgow, London"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="postalCode">Postal Code (optional)</label>
+          <input
+            type="text"
+            id="postalCode"
+            name="postalCode"
+            placeholder="e.g., G1 1AA"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="country"
+            >Country/Region* <span aria-hidden="true">(required)</span></label
+          >
+          <select
+            id="country"
+            name="country"
+            required
+            aria-required="true"
+            aria-label="Country/Region"
+          >
+            <option value="">Select a country</option>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="India">India</option>
+            <option value="Australia">Australia</option>
+            <option value="Japan">Japan</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="China">China</option>
+            <option value="Brazil">Brazil</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Canada">Canada</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Italy">Italy</option>
+            <option value="Spain">Spain</option>
+            <option value="Russia">Russia</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Singapore">Singapore</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message (optional)</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Write your message here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              What services are you interested in?*
+              <span aria-hidden="true">(Select at least one)</span>
+            </legend>
+            <div class="services-group">
+              <ul class="services-list">
+                <li>
+                  <input
+                    type="checkbox"
+                    id="service-website"
+                    name="services"
+                    value="Website Development"
+                  />
+                  <label for="service-website">Website Development</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="service-marketing"
+                    name="services"
+                    value="Marketing Strategy"
+                  />
+                  <label for="service-marketing">Marketing Strategy</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="service-business"
+                    name="services"
+                    value="Business Intelligence"
+                  />
+                  <label for="service-business">Business Intelligence</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="service-graphic"
+                    name="services"
+                    value="Graphic Designing"
+                  />
+                  <label for="service-graphic">Graphic Designing</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group privacy-group">
+          <div class="privacy-notice">
+            Squid Team is committed to protecting and respecting your privacy,
+            and we’ll only use your personal information to administer your
+            account and to provide the products and services you requested from
+            us. From time to time, we would like to contact you about our
+            products and services, as well as other content that may be of
+            interest to you. If you consent to us contacting you for this
+            purpose, please tick below:
+          </div>
+          <div class="consent-option">
+            <input type="checkbox" id="consent" name="consent" />
+            <label for="consent"
+              >I agree to receive other communications from Squid
+              Consultancy.</label
+            >
+          </div>
+          <div class="privacy-notice">
+            You can unsubscribe from these communications at any time. For more
+            information on how to unsubscribe, our privacy practices, and how we
+            are committed to protecting and respecting your privacy, please
+            review our <a href="/privacy-policy">Privacy Policy</a>.
+          </div>
+          <div class="privacy-notice">
+            By clicking submit below, you consent to allow Squid Consultancy to
+            store and process the personal information submitted above to
+            provide you the content requested.
+          </div>
+        </div>
+
+        <input type="hidden" name="_csrf" value="YOUR_CSRF_TOKEN" />
+        <button type="submit">Submit</button>
+        <br />
+        <p
+          style="
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-top: 40px;
+          "
+        >
+          Copyright © 2025 SCG, All Rights Reserved.
+          <br />
+          Analytics with Harry
+          <br />
+        </p>
+      </form>
+      <div id="responseMessage" aria-live="polite"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script>
+      // Configuration
+      const API_URL = "http://localhost:3000/submit";
+
+      // Utility function to sanitize input
+      function sanitizeInput(input) {
+        const div = document.createElement("div");
+        div.textContent = input;
+        return div.innerHTML;
+      }
+
+      // Initialize Choices.js for country dropdown
+      const countrySelect = document.getElementById("country");
+      new Choices(countrySelect, {
+        searchEnabled: true,
+        searchChoices: true,
+        itemSelectText: "",
+        placeholder: true,
+        placeholderValue: "Select a country",
+        classNames: {
+          containerOuter: "choices",
+          containerInner: "choices__inner",
+          input: "choices__input",
+          inputCloned: "choices__input--cloned",
+          list: "choices__list",
+          listItems: "choices__list--multiple",
+          listSingle: "choices__list--single",
+          listDropdown: "choices__list--dropdown",
+          item: "choices__item",
+          itemSelectable: "choices__item--selectable",
+          itemDisabled: "choices__item--disabled",
+          itemChoice: "choices__item--choice",
+          placeholder: "choices__placeholder",
+          group: "choices__group",
+          groupHeading: "choices__heading",
+        },
+      });
+
+      // Show/hide "Other" gender input
+      const genderRadios = document.querySelectorAll('input[name="gender"]');
+      const genderOtherInput = document.getElementById("genderOtherInput");
+      genderRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          genderOtherInput.classList.toggle(
+            "visible",
+            radio.id === "gender-other" && radio.checked
+          );
+        });
+      });
+
+      // Form submission handler
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          const button = form.querySelector("button");
+          const responseMessage = document.getElementById("responseMessage");
+
+          // Disable button and show loading state
+          button.disabled = true;
+          button.textContent = "Submitting...";
+
+          // Validate services
+          const services = Array.from(
+            document.querySelectorAll('input[name="services"]:checked')
+          ).map((input) => input.value);
+
+          if (services.length === 0) {
+            responseMessage.textContent = "Please select at least one service.";
+            responseMessage.className = "error";
+            button.disabled = false;
+            button.textContent = "Submit";
+            return;
+          }
+
+          // Validate email format
+          const email = document.getElementById("email").value;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            responseMessage.textContent = "Please enter a valid email address.";
+            responseMessage.className = "error";
+            button.disabled = false;
+            button.textContent = "Submit";
+            return;
+          }
+
+          // Validate phone number (if provided)
+          const countryCode = document.getElementById("countryCode").value;
+          const phoneNumber = document.getElementById("phoneNumber").value;
+          let phone = "";
+          if (phoneNumber) {
+            if (!countryCode) {
+              responseMessage.textContent =
+                "Please select a country code for the phone number.";
+              responseMessage.className = "error";
+              button.disabled = false;
+              button.textContent = "Submit";
+              return;
+            }
+            const cleanPhone = phoneNumber.replace(/\D/g, "");
+            if (cleanPhone.length < 6 || cleanPhone.length > 15) {
+              responseMessage.textContent =
+                "Phone number must be between 6 and 15 digits.";
+              responseMessage.className = "error";
+              button.disabled = false;
+              button.textContent = "Submit";
+              return;
+            }
+            phone = countryCode + cleanPhone;
+          }
+
+          // Validate gender "Other" input (if selected)
+          const gender = document.querySelector('input[name="gender"]:checked');
+          const genderOther = document.getElementById("genderOtherInput").value;
+          if (gender && gender.value === "Other" && !genderOther.trim()) {
+            responseMessage.textContent =
+              "Please specify your gender or select another option.";
+            responseMessage.className = "error";
+            button.disabled = false;
+            button.textContent = "Submit";
+            return;
+          }
+
+          // Collect and sanitize form data
+          const formData = {
+            companyName: sanitizeInput(
+              document.getElementById("companyName").value
+            ),
+            firstName: sanitizeInput(
+              document.getElementById("firstName").value
+            ),
+            lastName: sanitizeInput(document.getElementById("lastName").value),
+            gender: gender
+              ? gender.value === "Other"
+                ? sanitizeInput(genderOther)
+                : gender.value
+              : null,
+            email: sanitizeInput(email),
+            phone: phone ? sanitizeInput(phone) : null,
+            streetAddress: sanitizeInput(
+              document.getElementById("streetAddress").value
+            ),
+            city: sanitizeInput(document.getElementById("city").value),
+            postalCode: sanitizeInput(
+              document.getElementById("postalCode").value
+            ),
+            country: sanitizeInput(document.getElementById("country").value),
+            message: sanitizeInput(document.getElementById("message").value),
+            services,
+            consent: document.getElementById("consent").checked,
+            csrfToken: document.querySelector('input[name="_csrf"]').value,
+          };
+
+          try {
+            console.log("Sending request to:", API_URL, "with data:", formData); // Debug log
+            const response = await fetch(API_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
+
+            console.log("Received response:", response); // Debug log
+
+            let result;
+            try {
+              result = await response.json();
+              console.log("Parsed response JSON:", result); // Debug log
+            } catch (jsonError) {
+              throw new Error(
+                `Failed to parse server response: ${jsonError.message}`
+              );
+            }
+
+            if (response.ok) {
+              responseMessage.textContent = "Inquiry submitted successfully!";
+              responseMessage.className = "success";
+
+              // Delay form reset for better UX
+              setTimeout(() => {
+                form.reset();
+                genderOtherInput.classList.remove("visible");
+
+                // Safely reset Choices.js
+                if (countrySelect && countrySelect.choices) {
+                  try {
+                    countrySelect.choices.setChoiceByValue("");
+                  } catch (choicesError) {
+                    console.warn("Failed to reset Choices.js:", choicesError);
+                  }
+                }
+              }, 1000); // 1-second delay
+
+              // Track submission with Google Analytics (if available)
+              if (typeof gtag === "function") {
+                try {
+                  gtag("event", "form_submission", {
+                    event_category: "Registration",
+                    event_label: "Squid Consultancy",
+                  });
+                } catch (gaError) {
+                  console.warn("Google Analytics tracking failed:", gaError);
+                }
+              }
+            } else {
+              responseMessage.textContent =
+                result.message ||
+                `Submission failed (Status: ${response.status}). Please try again.`;
+              responseMessage.className = "error";
+              console.error("Server error:", {
+                status: response.status,
+                message: result.message,
+              });
+            }
+          } catch (error) {
+            responseMessage.textContent =
+              "Failed to submit the form. Please check your connection or try again later.";
+            responseMessage.className = "error";
+            console.error("Submission error:", {
+              message: error.message,
+              stack: error.stack,
+              formData: formData,
+            });
+          } finally {
+            button.disabled = false;
+            button.textContent = "Submit";
+            // Enhance accessibility
+            responseMessage.setAttribute("tabindex", "-1");
+            responseMessage.focus();
+          }
+        });
+    </script>
+    <script>
+      // ===============================
+      // Configuration
+      // ===============================
+      const config = {
+        disableRightClick: true,
+        disableDevToolsShortcuts: true,
+        detectDevTools: true,
+        scrambleCopy: true,
+        disableClipboard: true,
+        disablePrint: true,
+        disableZoom: true,
+      };
+
+      // ===============================
+      // DevTools Detection
+      // ===============================
+      function setupDevToolsDetection() {
+        if (!config.detectDevTools) return;
+
+        let devtoolsOpen = false;
+
+        const devtoolsCheck = () => {
+          const start = performance.now();
+          debugger;
+          const end = performance.now();
+
+          if (end - start > 100) {
+            if (!devtoolsOpen) {
+              devtoolsOpen = true;
+              alert("DevTools detected! Page access restricted.");
+            }
+          } else {
+            devtoolsOpen = false;
+          }
+        };
+
+        setInterval(devtoolsCheck, 1000);
+      }
+
+      // ===============================
+      // Event Handlers
+      // ===============================
+      function setupEventListeners() {
+        if (config.disableRightClick) {
+          const preventContextMenu = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            console.log("Right-click blocked");
+            return false;
+          };
+
+          [document, window].forEach((target) => {
+            target.addEventListener("contextmenu", preventContextMenu, {
+              capture: true,
+              passive: false,
+            });
+          });
+        }
+
+        if (config.disableDevToolsShortcuts || config.disableZoom) {
+          document.addEventListener("keydown", (e) => {
+            try {
+              if (config.disableDevToolsShortcuts) {
+                const blockedCombos = [
+                  e.key === "F12",
+                  e.ctrlKey &&
+                    e.shiftKey &&
+                    ["I", "J", "C"].includes(e.key.toUpperCase()),
+                  e.ctrlKey && e.key.toLowerCase() === "u",
+                  e.ctrlKey &&
+                    ["c", "x", "v", "s", "p"].includes(e.key.toLowerCase()),
+                  e.metaKey &&
+                    ["c", "x", "v", "s", "p"].includes(e.key.toLowerCase()),
+                ];
+                if (blockedCombos.some(Boolean)) {
+                  e.preventDefault();
+                  console.warn("Shortcut blocked");
+                }
+              }
+
+              if (config.disableZoom) {
+                if (
+                  (e.ctrlKey || e.metaKey) &&
+                  ["+", "-", "=", "0"].includes(e.key)
+                ) {
+                  e.preventDefault();
+                }
+              }
+            } catch (err) {
+              console.error("Keydown handler error:", err);
+            }
+          });
+        }
+
+        if (config.scrambleCopy || config.disableClipboard) {
+          document.addEventListener("copy", (e) => {
+            try {
+              if (config.disableClipboard) {
+                e.preventDefault();
+                return;
+              }
+              if (config.scrambleCopy) {
+                const selection = window.getSelection()?.toString();
+                if (selection) {
+                  const scrambled =
+                    selection
+                      .split("")
+                      .sort(() => Math.random() - 0.5)
+                      .join("") + " [SCRAMBLED]";
+                  e.clipboardData.setData("text/plain", scrambled);
+                  e.preventDefault();
+                }
+              }
+            } catch (err) {
+              console.error("Copy handler error:", err);
+            }
+          });
+        }
+
+        if (config.disableClipboard) {
+          ["cut", "paste", "drop"].forEach((evt) => {
+            document.addEventListener(evt, (e) => {
+              e.preventDefault();
+            });
+          });
+        }
+
+        if (config.disablePrint) {
+          window.addEventListener("beforeprint", (e) => {
+            alert("Printing is disabled on this page.");
+            e.preventDefault();
+          });
+        }
+      }
+
+      // ===============================
+      // Initialize Protections
+      // ===============================
+      function initialize() {
+        try {
+          setupDevToolsDetection();
+          setupEventListeners();
+        } catch (err) {
+          console.error("Initialization error:", err);
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initialize);
+      } else {
+        initialize();
+      }
+    </script>
+  </body>
+</html>
